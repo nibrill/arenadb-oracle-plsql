@@ -1,6 +1,6 @@
 -- =========================================
 -- 03_queries.sql
--- TORNEO GAMER - CONSULTAS SQL
+-- ARENADB - CONSULTAS SQL
 -- =========================================
 
 -- 1) Listar jugadores con su equipo y rol

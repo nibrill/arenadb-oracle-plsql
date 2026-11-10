@@ -1,6 +1,6 @@
 -- =========================================
 -- 04_plsql.sql
--- TORNEO GAMER - FUNCIONES, PROCEDIMIENTOS Y BLOQUES PL/SQL
+-- ARENADB - FUNCIONES, PROCEDIMIENTOS Y BLOQUES PL/SQL
 --
 -- Este script solo CREA objetos y ejecuta pruebas de LECTURA,
 -- así que puedes correrlo las veces que quieras sin alterar datos.

@@ -1,0 +1,16 @@
+import re, json
+R = "../sql/"
+s = open(R+"01_schema.sql", encoding="utf-8").read()
+s = s.replace("NUMBER GENERATED ALWAYS AS IDENTITY", "INTEGER").replace("VARCHAR2", "VARCHAR")
+s = re.sub(r"NUMBER\(\d+,\d+\)", "NUMERIC", s); s = re.sub(r"\bNUMBER\b", "INTEGER", s)
+s = s.replace("DEFAULT SYSDATE", "DEFAULT CURRENT_TIMESTAMP").replace("DEFAULT SYSTIMESTAMP", "DEFAULT CURRENT_TIMESTAMP").replace("DEFAULT USER", "DEFAULT 'x'")
+s = re.sub(r"COMMENT ON TABLE.*?;\n", "", s)
+s = re.sub(r"CONSTRAINT tg_pk_\w+ PRIMARY KEY", "PRIMARY KEY", s)
+s = re.sub(r"ALTER TABLE equipos\s+ADD CONSTRAINT[^;]*;", "", s)
+d = open(R+"02_data.sql", encoding="utf-8").read()
+d = re.sub(r"DATE '([\d-]+)'", r"'\1'", d).replace("COMMIT;", "")
+v = open(R+"05_views.sql", encoding="utf-8").read().replace("CREATE OR REPLACE VIEW", "CREATE VIEW")
+t = open("demo_template.html", encoding="utf-8").read()
+t = t.replace("__SCHEMA__", json.dumps(s)).replace("__DATA__", json.dumps(d)).replace("__VIEWS__", json.dumps(v))
+open("../docs/index.html", "w", encoding="utf-8", newline="\n").write(t)
+print(len(t))

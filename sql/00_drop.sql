@@ -1,6 +1,6 @@
 -- =========================================
 -- 00_drop.sql
--- TORNEO GAMER - LIMPIEZA (re-ejecutable)
+-- ARENADB - LIMPIEZA (re-ejecutable)
 -- Elimina todos los objetos del proyecto para poder
 -- reinstalar desde cero. Si es la primera vez, no pasa nada:
 -- los objetos que no existen simplemente se ignoran.

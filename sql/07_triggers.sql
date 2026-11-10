@@ -1,6 +1,6 @@
 -- =========================================
 -- 07_triggers.sql
--- TORNEO GAMER - TRIGGERS (reglas de negocio que un CHECK no puede expresar)
+-- ARENADB - TRIGGERS (reglas de negocio que un CHECK no puede expresar)
 -- =========================================
 
 -- 1) Valida el ganador de una partida y deja auditoría de los cambios

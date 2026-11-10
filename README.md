@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/img/banner.png" alt="Torneo Gamer - Oracle SQL y PL/SQL" width="800">
+  <img src="docs/img/banner.png" alt="ArenaDB - Oracle SQL y PL/SQL" width="800">
 </p>
 
 <p align="center">
@@ -9,7 +9,7 @@
   <img alt="Idioma" src="https://img.shields.io/badge/idioma-espa%C3%B1ol-a371f7">
 </p>
 
-# 🎮 Torneo Gamer — Base de datos Oracle PL/SQL
+# 🎮 ArenaDB — Torneos de eSports en Oracle PL/SQL
 
 Sistema completo para gestionar **torneos de eSports** directamente en la base de datos Oracle:
 jugadores, equipos, torneos, partidas, puntajes, tabla de posiciones y ranking global.
@@ -21,8 +21,26 @@ caso entretenido, o como punto de partida para tu propio sistema de torneos.
 
 ---
 
+## ▶️ Pruébalo ahora (sin instalar nada)
+
+<p align="center">
+  <a href="https://nibrill.github.io/arenadb-oracle-plsql/"><b>👉 Abrir la demo interactiva 👈</b></a>
+</p>
+
+<p align="center">
+  <a href="https://nibrill.github.io/arenadb-oracle-plsql/"><img src="docs/img/demo-web.png" alt="Demo web de ArenaDB" width="800"></a>
+</p>
+
+La demo corre **100 % en tu navegador** con los datos reales del proyecto: tabla de posiciones por torneo,
+ranking global, un **simulador** de `pkg_torneo.registrar_resultado` (mira cómo se mueve el ranking, y cómo se
+rechaza una partida ya jugada) y un **playground SQL** con consultas listas.
+Es una réplica en SQLite/JavaScript para poder jugar sin Oracle; el código PL/SQL real está en `sql/`.
+
+---
+
 ## 📑 Contenido
 
+- [Pruébalo ahora](#️-pruébalo-ahora-sin-instalar-nada)
 - [¿Qué aprenderás con este proyecto?](#-qué-aprenderás-con-este-proyecto)
 - [Instalación rápida](#-instalación-rápida)
 - [Modelo de datos](#-modelo-de-datos)
@@ -66,8 +84,8 @@ caso entretenido, o como punto de partida para tu propio sistema de torneos.
 ### Con un solo comando
 
 ```bash
-git clone https://github.com/nibrill/torneo-gamer-oracle-plsql.git
-cd torneo-gamer-oracle-plsql
+git clone https://github.com/nibrill/arenadb-oracle-plsql.git
+cd arenadb-oracle-plsql
 sqlplus usuario/clave@//localhost:1521/FREEPDB1 @sql/install.sql
 ```
 
@@ -129,7 +147,7 @@ Después prueba:
 ## 📂 Estructura del repositorio
 
 ```text
-torneo-gamer-oracle-plsql/
+arenadb-oracle-plsql/
 ├── sql/
 │   ├── install.sql      -- instala todo en orden
 │   ├── 00_drop.sql      -- limpieza (permite reinstalar)
@@ -141,7 +159,8 @@ torneo-gamer-oracle-plsql/
 │   ├── 06_package.sql   -- package pkg_torneo
 │   ├── 07_triggers.sql  -- validaciones y auditoría
 │   └── 08_demo.sql      -- demo de todo lo anterior (con ROLLBACK)
-├── docs/                -- diagramas e imágenes
+├── docs/                -- demo web (index.html), diagramas e imágenes
+├── tools/               -- build_demo.py: regenera docs/index.html desde los .sql
 ├── LICENSE.md
 └── README.md
 ```

@@ -1,6 +1,6 @@
 -- =========================================
 -- 05_views.sql
--- TORNEO GAMER - VISTAS
+-- ARENADB - VISTAS
 -- =========================================
 
 -- Tabla de posiciones por torneo

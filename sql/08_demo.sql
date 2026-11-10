@@ -1,6 +1,6 @@
 -- =========================================
 -- 08_demo.sql
--- TORNEO GAMER - DEMO DE LA LÓGICA DE NEGOCIO
+-- ARENADB - DEMO DE LA LÓGICA DE NEGOCIO
 --
 -- Muestra el paquete y los triggers en acción. Al final hace
 -- ROLLBACK, así que la base queda exactamente como estaba y

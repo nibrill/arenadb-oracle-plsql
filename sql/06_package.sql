@@ -1,6 +1,6 @@
 -- =========================================
 -- 06_package.sql
--- TORNEO GAMER - PAQUETE pkg_torneo
+-- ARENADB - PAQUETE pkg_torneo
 --
 -- Agrupa la lógica de negocio del torneo:
 --   * registrar_resultado : cierra una partida (con SAVEPOINT/ROLLBACK)
